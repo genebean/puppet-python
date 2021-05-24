@@ -38,7 +38,7 @@
 class python (
   Enum['absent', 'present', 'latest'] $ensure     = $python::params::ensure,
   $version                                        = $python::params::version,
-  Enum['absent', 'present', 'latest'] $pip        = $python::params::pip,
+  Variant[String, Enum['absent', 'present', 'latest']] $pip        = $python::params::pip,
   Enum['absent', 'present', 'latest'] $dev        = $python::params::dev,
   Enum['absent', 'present', 'latest'] $virtualenv = $python::params::virtualenv,
   Enum['absent', 'present', 'latest'] $gunicorn   = $python::params::gunicorn,
